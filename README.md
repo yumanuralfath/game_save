@@ -30,6 +30,75 @@ A bash script for automatically backing up game save files to a GitHub repositor
    sudo mv game_save_script.sh /usr/local/bin/game-save
    ```
 
+## Setup for Lutris Post-Exit Auto Save
+
+To automatically backup your game saves when exiting games through Lutris:
+
+### 1. Configure the Script Path
+Make sure the script is in a permanent location with full path access:
+```bash
+# Move to system bin (recommended)
+sudo cp game_save_script.sh /usr/local/bin/game-save
+sudo chmod +x /usr/local/bin/game-save
+
+# Or use home directory
+mkdir -p ~/scripts
+cp game_save_script.sh ~/scripts/
+chmod +x ~/scripts/game_save_script.sh
+```
+
+### 2. Configure Individual Games in Lutris
+
+For each game you want to auto-backup:
+
+1. **Right-click the game** in Lutris → **Configure**
+2. **Go to "System options" tab**
+3. **Scroll down to "Post-exit script" field**
+4. **Enter your backup command**
+
+### 3. Post-Exit Script Examples
+
+```bash
+# Using system-wide installation
+/usr/local/bin/game-save "game-name" "/path/to/save/directory"
+
+# Using home directory installation
+/home/username/scripts/game_save_script.sh "game-name" "/path/to/save/directory"
+
+# Example for a Wine game
+/usr/local/bin/game-save "witcher3" "$HOME/.wine/drive_c/users/$USER/Documents/My Games/The Witcher 3"
+
+# Example for native Linux game
+/usr/local/bin/game-save "celeste" "$HOME/.local/share/Celeste"
+```
+
+### 4. Find Your Game's Save Location
+
+Before setting up the post-exit script, you need to locate where your game stores saves:
+
+```bash
+# Search for game-specific directories
+find ~ -name "*game-name*" -type d 2>/dev/null
+
+# Common locations:
+# Native Linux: ~/.local/share/[game]/ or ~/.config/[game]/
+# Wine games: ~/.wine/drive_c/users/[user]/Documents/My Games/[game]/
+# Steam: ~/.local/share/Steam/userdata/[userid]/[appid]/
+```
+
+### 5. Test Your Setup
+
+Before relying on automatic backups:
+
+1. **Test manually** in terminal:
+   ```bash
+   /usr/local/bin/game-save "test-game" "/path/to/saves"
+   ```
+
+2. **Launch and exit your game** through Lutris to verify the post-exit script runs
+
+3. **Check your GitHub repository** to confirm saves were uploaded
+
 ## Usage
 
 ```bash
@@ -127,6 +196,18 @@ Run `gh auth login` to authenticate with GitHub
 
 ### Repository not found
 Ensure your GitHub username is correctly set in the `USER` variable
+
+### Lutris post-exit script not working
+- Verify the script path is absolute (e.g., `/home/user/game_save_script.sh`)
+- Check that the save directory path exists
+- Test the command manually in terminal first
+- Check Lutris logs for error messages
+- Ensure script has executable permissions
+
+### Save directory not found
+- For Wine games, check the Wine prefix path
+- Use `find` command to locate save files: `find ~ -name "*game-name*" -type d 2>/dev/null`
+- Check game documentation or PCGamingWiki for save locations
 
 ## License
 
