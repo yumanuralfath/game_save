@@ -31,7 +31,8 @@ git rm -r --cached "$GAME" 2>/dev/null
 git add "$GAME"
 
 if ! git diff --cached --quiet; then
-  git commit -m "Update save for $GAME"
+  NOW=$(date +"%Y-%m-%d %H:%M:%S")
+  git commit -m "Update save for $GAME ($NOW)"
   git push -u origin main
 else
   echo "Tidak ada perubahan pada $GAME"
