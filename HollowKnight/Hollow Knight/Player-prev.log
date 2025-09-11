@@ -1,0 +1,64 @@
+Mono path[0] = 'C:/GOG Games/Hollow Knight/Hollow Knight_Data/Managed'
+Mono config path = 'C:/GOG Games/Hollow Knight/MonoBleedingEdge/etc'
+Initialize engine version: 2020.2.2f1 (068178b99f32)
+[Subsystems] Discovering subsystems at path C:/GOG Games/Hollow Knight/Hollow Knight_Data/UnitySubsystems
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics (TGL GT2) (ID=0x9a78)
+    Vendor:   
+    VRAM:     8739 MB
+    Driver:   31.0.21902.5
+Begin MonoManager ReloadAssembly
+- Completed reload, in  0.104 seconds
+OnLevelWasLoaded was found on GameMap
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+OnLevelWasLoaded was found on PlayMakerUnity2d
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+D3D11 device created for Microsoft Media Foundation video decoding.
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+The class named 'ConfigManager' is abstract. The script class can't be abstract!
+
+UnloadTime: 0.914700 ms
+Graphics tier changed to High
+
+GOG signing in...
+
+Selected online subsystem GOGGalaxyOnlineSubsystem
+
+Discovered supported languages: DE, EN, ES, FR, IT, JA, KO, PT, RU, ZH
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Loaded saved language code 'EN'
+
+Restored language code 'EN'
+
+
+Unloading 362 unused Assets to reduce memory usage. Loaded Objects now: 3824.
+Total: 1.295800 ms (FindLiveObjects: 0.132300 ms CreateObjectMapping: 0.078100 ms MarkObjects: 1.016700 ms  DeleteObjects: 0.067900 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Didn't need to wait for PlayerPrefs load.
+
+UnloadTime: 3.786300 ms
+DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+
+Performing automatic level start.
+
+Game controller set to None.
+
+
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 45151.
+Total: 99.779400 ms (FindLiveObjects: 4.060500 ms CreateObjectMapping: 1.046600 ms MarkObjects: 94.535400 ms  DeleteObjects: 0.135200 ms)
+
+GOG authorization failed: FAILURE_REASON_GALAXY_SERVICE_NOT_AVAILABLE
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 264 -> priority: 1 
+  Thread -> id: 268 -> priority: 1 
