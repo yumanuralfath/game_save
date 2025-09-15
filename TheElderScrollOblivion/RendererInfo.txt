@@ -13,14 +13,14 @@ Renderer Device Information:
 	Nonpowerof2textures		: yes
 	FP16ARGB blending  		: yes
 	FP16ARGB filtering 		: yes
-	High dynamic range 		: no
-	Bloom lighting     		: yes
+	High dynamic range 		: yes
+	Bloom lighting     		: no
 	Refraction         		: yes
 	2.0 hair           		: yes
 	SLI mode           		: no
 	Water shader       		: yes
-	Water reflections  		: no
-	Water displacement 		: no
+	Water reflections  		: yes
+	Water displacement 		: yes
 	Water high res     		: no
 	Multisample Type   		: 0
-	Shader Package     		: 7
+	Shader Package     		: 17
